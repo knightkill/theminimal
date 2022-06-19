@@ -1,9 +1,9 @@
 .post-date-divider { 
   text-align: center;
   font-size: .9rem;
-  color: #555; 
+  color: $color-light;
   line-height: .3; 
-  border-bottom: 2px solid #efefef;
+  border-bottom: 2px solid $color-hover;
   margin: 3rem 0 1rem 0;
   span {
     background: $body-bg;
@@ -22,25 +22,25 @@
 }
 
 article { 
-  color: #333;
+  color: $color-light;
   .post-title {
     font-size: 2rem;
   }
   .comments-number {
-    color: #555;
+    color: $color-light2;
     font-size: .9rem;
   }
 }
 
 .post-tag {
-  background: #f7f7f7;
+  background: $color-hover;
   font-size: .7rem;
   padding: 0 .4rem;
   @include border-radius(.3rem);
   cursor: pointer;
   margin: .3rem; 
   &:hover {
-    background: #eee;
+    background: $color;
   }
 }
 
@@ -53,4 +53,12 @@ pre {
   font-family: monospace;
   text-align: left;
   direction: ltr;
+}
+
+.entry-content {
+  figcaption {
+    color: $color-light2;
+    text-align: center;
+    font-size: small;
+  }
 }

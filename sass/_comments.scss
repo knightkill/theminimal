@@ -2,8 +2,10 @@
 	margin-top: 2em;
 	ol {
 		list-style: none;
+		padding-inline-start: 0;
+		padding: 0 2em;
 		li {
-			border-top: 1px solid #efefef;
+			border-top: 1px solid $color-hover;
 			padding: 1rem 0;
 
 			.comment-author {
@@ -27,23 +29,25 @@
 
 			p {
 				font-size: .9rem;
+				color: $color-light2;
 			}
 
 			.reply {
+				margin-top: 1rem;
 				margin-bottom: .5rem;
 				text-align: left;
 				a {
-					background: $btn-success-bg;
-					padding: 0 .4rem;
+					background: $btn-bg;
+					padding: $btn-padding;
 					font-size: .8rem;
-					color: $btn-success-color;
-					@include border-radius($btn-success-border-radius);
+					color: $btn-color;
+					@include border-radius($btn-border-radius);
 				}
 			}
 
 			.comment-awaiting-moderation {
 				background-color: #777;
-				color: #fff;
+				color: $color;
 				@include border-radius(.2rem);
 				padding: 0 .3rem;
 				font-size: .7rem;
@@ -77,7 +81,7 @@
 			padding: 0.6em 2%; 
 			border: 1px solid #eee;
 			@include border-radius(4px);
-			font-family: 'Samim';
+			font-family: 'Noto Serif';
 		}
 		textarea {
 			display: block;
@@ -100,15 +104,43 @@
 			margin-right: 2.5%; 
 		}
 		input[name=submit] { 
-			background-color: #5b5;
+			background-color: $color-light2;
 			border: none;
 			width: 99%;
-			color: #fff;
+			color: $body-bg;
 			cursor: pointer;
 			font-weight: 700; 
 			&:hover {
-				background-color: #5a5;
+				background-color: $color-light;
 			}
+		}
+	}
+
+	#respond {
+		.comment-reply-title {
+			color: $color-light;
+		}
+	}
+
+	#commentform {
+		.comment-form-cookies-consent {
+			text-align: start;
+			padding-left: 1em;
+			label {
+				width:auto !important;
+				text-align: start;
+				font-size: 0.8em;
+				color: $color-hover;
+			}
+
+			#wp-comment-cookies-consent {
+				width: auto !important;
+			}
+		}
+
+		.logged-in-as {
+			text-align: start;
+			margin: 0 0.5em;
 		}
 	}
 }
@@ -121,8 +153,8 @@
 				margin: 1rem 0!important; 
 				width: 94%;
 				font-size: 1em;
-				resize: vertical; 
-			} 
+				resize: vertical;
+			}
 		}
 	}
 }

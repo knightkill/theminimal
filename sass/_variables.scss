@@ -1,13 +1,21 @@
 /** Theme Color Samples :) **/ 
-$color: #1D8E9B;
-$color-hover: #156770;
-$color-light: #5E9CA3;
-$color-light2: #b5dadf;
+$color: #F24405;
+$color-hover: #74708C;
+$color-light: #77A1A6;
+$color-light2: #146173;
+$color-accent: #F2E7C4;
 
 $container-width: 40rem; 
 $container-width-plus: 42rem;
 
-$body-bg: #fff;
+$body-bg: #0E1F26;
+$body-alt: #072731;
+
+$btn-bg: $color-light;
+$btn-bg-hover: $color-light2;
+$btn-border-radius: .2rem;
+$btn-padding: 0.5rem 1rem;
+$btn-color: $body-bg;
 
 $btn-success-bg: #5b5;
 $btn-success-border-radius: .2rem;

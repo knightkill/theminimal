@@ -6,12 +6,12 @@
   -ms-transform: rotate($deg);
 }
 
-@mixin transition ($a, $d) {
+@mixin transition($a, $d) {
   -webkit-transition: $a $d;
   transition: $a $d;
 }
 
-@mixin transform-translate ($a, $b) {
+@mixin transform-translate($a, $b) {
   -moz-transform: translate($a, $b);
   -ms-transform: translate($a, $b);
   -o-transform: translate($a, $b);
@@ -19,7 +19,7 @@
   transform: translate($a, $b);
 }
 
-@mixin border-radius ($radius) {
+@mixin border-radius($radius) {
   -webkit-border-radius: $radius;
   -moz-border-radius: $radius;
   -ms-border-radius: $radius;
@@ -30,5 +30,5 @@
   background-image: -webkit-linear-gradient($direction, $color-stop1, $color-stop2, $color-stop3);
   background-image: -moz-linear-gradient($direction, $color-stop1, $color-stop2, $color-stop3);
   background-image: -ms-linear-gradient($direction, $color-stop1, $color-stop2, $color-stop3);
-  background-image: -o-linear-gradient($direction, $color-stop1, $color-stop2, $color-stop3); 
+  background-image: -o-linear-gradient($direction, $color-stop1, $color-stop2, $color-stop3);
 }

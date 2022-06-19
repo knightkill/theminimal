@@ -1,8 +1,8 @@
-.header {  
+.header {
+  padding-bottom: 3rem;
   #nav-wrapper {
-    background: #fafafa;
-    border-bottom: 1px solid #eee;
-    border-top: 3px solid $color;
+    background: $body-bg;
+    border-bottom: 3px solid $color;
     .container { 
       padding: .5rem 0;
     }

@@ -1,10 +1,12 @@
 article { 
-  color: #333;
+  color: $color-light;
   .post-title {
+    text-align: center;
     font-size: 2rem;
   }
   .comments-number {
-    color: #555;
+    text-align: right;
+    color: $color-light2;
     font-size: .9rem;
   }
 }

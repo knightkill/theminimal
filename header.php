@@ -14,11 +14,11 @@
 <body>
 <div class="wrapper">
     <header class="header">
-        <div id="nav-wrapper">
+        <div id="nav-wrapper" class="hidden">
             <section class="container">
             <nav>
             <ul>
-                <?php 
+                <?php
                 // show pages in header!
                 $pages = get_pages(array(
                   'offset'       => 0,

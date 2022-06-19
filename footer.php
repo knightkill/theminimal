@@ -1,9 +1,9 @@
 <footer id="footer">
     <div class="container">
-        <div class="divider">
+        <div class="divider hidden">
             <span><?php _e('Categories'); ?></span>
         </div>
-        <ul>
+        <ul class="hidden">
             <?php
             foreach (get_categories() as $category) { ?>
                 <li class="brackets">
@@ -12,7 +12,7 @@
             <?php } ?>
         </ul>
         <div class="divider">
-            <span><?php _e('Tags') ?></span>
+            <span><?php _e('Topics') ?></span>
         </div>
         <div id="cloud-tags">
             <?php $args = array(
@@ -23,12 +23,11 @@
                 'format'    => 'flat',
                 'orderby'   => 'name',
                 'link'      => 'view',
-                'taxonomy'  => 'post_tag',
+                'taxonomy'  => 'topic',
             ); ?>
             <?php wp_tag_cloud( $args ); ?>
         </div>
-        
-        <div class="divider"></div>
+
         <ul>
     <?php       
     // header links from Theme panel 
@@ -86,9 +85,6 @@
     <?php if ( get_option('footer_text') != null && get_option('footer_text') != '' ) : ?>
         <div class="divider"></div>
     <?php endif; ?>
-    <p id="copyright-stuff">
-        <a href="https://github.com/TheYahya/thewhite">قالب سفید</a> اثر <a href="http://theyahya.com/">یحیی</a>
-    </p>
     </div>
 </footer>
 <?php wp_footer(); ?>

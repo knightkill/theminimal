@@ -2,7 +2,7 @@
 <div class="container"> 
     <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
         <div class="post-date-divider">
-            <span><?php the_time('l j F  Y') ?></span>
+            <span><?php the_date('F j, Y'); ?> at <?php the_time('g:i a'); ?></span>
         </div>
         <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
             <h1 class="post-title">
@@ -21,8 +21,14 @@
                     <a href="<?php echo get_term_link($tag->term_id)?>" class="post-tag"><?php echo $tag->name?></a>
                 <?php } ?>
             <?php } ?> 
-        </p> 
-    <?php comments_template(); ?>
+        </p>
+    <?php
+
+        if ( comments_open() || get_comments_number() ) :
+            comments_template();
+        endif;
+
+        ?>
     <?php endwhile; ?>
 </div><!--.container-->
 <?php get_footer(); ?>

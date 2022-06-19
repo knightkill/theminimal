@@ -6,7 +6,7 @@ small, strike, strong, sub, sup, tt, var,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td, button, textarea {
-  font-family: Sahel;
+  font-family: Noto Serif;
 }
 html, body {
   margin: 0;
@@ -27,10 +27,15 @@ hr {
   height: 1px; 
   @include background-image-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0); 
 }
+
+.hidden {
+  visibility: hidden;
+
+}
  
 blockquote {
   display: block;
-  background: #f8f8f8;
+  background: $color-hover;
   @include border-radius(.4rem);
   padding: 2rem 3rem 1rem 1.5rem;
   margin: .2rem 1rem .2rem 0;  
@@ -67,30 +72,29 @@ code {
 .brackets {
   padding: 0 10px;
   &:after, &:before {
-    color: #888;
+    color: $color-light;
     font-weight: 900;
     position: absolute;
     @include transition(all, .3s);
   }
   &:after {
-    content: '}'; 
-    padding-right: .1em;
-    @include transform-translate(0, .1em);
+    content: '}';
+    @include transform-translate(0.1em, 0em);
   }
   &:before {
     content: '{';
-    @include transform-translate(.4em, .1em);
+    @include transform-translate(-0.5em, 0em);
   }
   &:hover {
     &:after, &:before {
-    color: #444;
+    color: $color-light2;
   }
   &:after { 
-    @include transform-translate(-.2em, .1em);
+    @include transform-translate(0em, 0em);
     padding-right: 0;
   }
   &:before { 
-    @include transform-translate(.6em, .1em);
+    @include transform-translate(-0.4em, 0em);
     }
   }
 }
@@ -98,9 +102,9 @@ code {
 .divider { 
   text-align: center;
   font-size: 1.4rem;
-  color: #555; 
+  color: $color-light2;
   line-height: .3; 
-  border-bottom: 1px solid #efefef;
+  border-bottom: 1px solid $color-hover;
   margin: 3rem 0 1rem 0;
   span {
     background: $body-bg;
@@ -129,7 +133,7 @@ article {
 
 .wp-caption {
   @include border-radius(4px);
-  background: #f4f4f4;
+  background: $color-hover;
   img {
     width: 100%;
   }
@@ -137,7 +141,7 @@ article {
     margin: 0 auto;
     padding-bottom: .3rem;
     text-align: center;
-    color: #666;
+    color: $color;
   }
 }
 
